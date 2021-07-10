@@ -1,0 +1,24 @@
+{
+  "name": "headless-wp",
+  "version": "1.0.0",
+  "description": "site for my upcoming book about headless wp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wordpress",
+    "headless",
+    "javascript",
+    "bootstrap",
+    "rest",
+    "api"
+  ],
+  "author": "per skolander thykjaer jensen",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "bootstrap-icons": "^1.5.0",
+    "sass": "^1.35.2"
+  }
+}

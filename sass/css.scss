@@ -1,0 +1,73 @@
+/**
+ * ... Per's styles ...
+*/
+// import all SASS from BT
+@import "../node_modules/bootstrap/scss/bootstrap";
+/* Colors */
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+/* My Theme Colors */
+$bg-header-footer: $indigo-700;
+
+// Headings font
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+// layout sizes
+$header-height: 30vh;
+$footer-height: 200px;
+// layout elements
+body {
+  margin: 0;
+}
+
+footer,
+header {
+  height: $header-height;
+  background-color: $bg-header-footer;
+  color: $light;
+
+  a {
+    color: $success;
+  }
+  a:hover {
+    color: $teal-300;
+  }
+}
+// color samples
+.colorSamples {
+  height: 5rem;
+  background: $info;
+}
+// sample: header and footer
+
+#pClr-09 {
+  @extend header;
+  height: 5rem;
+}
+// headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+{
+  color: $purple-900;
+  font-family: 'Carter One', cursive;
+}
+#pClr-10 {
+  color: $purple-900;
+}
+// in the header more readable with
+header {
+  h1 {
+    color: $light;
+  }
+}
