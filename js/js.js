@@ -36,7 +36,9 @@ const TestImage = function(message, w, h) {
 }
 
 // add dummy content to the layout
+/*
 leftText.innerHTML = Lorem()
 for (let i=0;i<7;i++){ centerText.innerHTML += Lorem() }
 for (let i=0;i<3;i++){ rightText.innerHTML += Lorem() }
 hero.innerHTML = TestImage('Carousel', 2000, 400)
+*/
