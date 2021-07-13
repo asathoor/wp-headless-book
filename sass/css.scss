@@ -15,26 +15,29 @@ $theme-colors: (
   "dark": $dark
 );
 /* My Theme Colors */
-$bg-header-footer: $indigo-700;
+
+// #3c6a2d
 
 // Headings font
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
-// layout sizes
-$header-height: 30vh;
-$footer-height: 200px;
+
+// vars
+$header-height: 10vh; // header height
+// $bg-header-footer: #3c6a2d; // $bg-header-footer: $indigo-700;
+$bg-header-footer: #133014; // $bg-header-footer: $indigo-700;
+
+
 // layout elements
 body {
   margin: 0;
 }
 
-footer,
-header {
-  height: $header-height;
-  background-color: $bg-header-footer;
+footer {
   color: $light;
+  background-color: $bg-header-footer;
 
   a {
-    color: $success;
+    color: $light;
   }
   a:hover {
     color: $teal-300;
@@ -43,14 +46,9 @@ header {
 // color samples
 .colorSamples {
   height: 5rem;
-  background: $info;
+  background: $info; 
 }
-// sample: header and footer
 
-#pClr-09 {
-  @extend header;
-  height: 5rem;
-}
 // headings
 h1,
 h2,
@@ -62,12 +60,9 @@ h6,
   color: $purple-900;
   font-family: 'Carter One', cursive;
 }
-#pClr-10 {
-  color: $purple-900;
-}
-// in the header more readable with
-header {
-  h1 {
-    color: $light;
-  }
+
+// navigation
+#navHeader {
+  background-color: $bg-header-footer;
+  min-height: 10vh;
 }

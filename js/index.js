@@ -6,7 +6,7 @@
 const getPosts = "https://multimusen.dk/wpsandbox/wp-json/wp/v2/pages/"
 
 // Fetch a page via id
-function getPage(pageId) {
+function getPage(pageId, showIn) {
 
   // preloader bt-spinner (I know, not a solution, but ... WTH)
   cntRight.innerHTML = '<div id="preloader" class="spinner-border text-success" role="status">'
@@ -21,7 +21,7 @@ function getPage(pageId) {
     console.log(data); // what's in the JSON string?
 
     // create HTML here
-    cntRight.innerHTML = '<article>' +
+    showIn.innerHTML = '<article>' +
       '<h2>' + data.title.rendered + '</h2>' +
       '<div>' +
       data.content.rendered +
@@ -48,7 +48,7 @@ const __Init = (function() {
     <!-- navigation -->
     <nav id="navHeader" class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">New e-book: "Headless WordPress"</a>
+        <a class="navbar-brand" href="index.html">Headless WordPress</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,15 +57,16 @@ const __Init = (function() {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <!-- nav items -->
             <li class="nav-item">
-              <a class="nav-link"  href="#" onClick="getPage(2761)">The Book</a>
+              <a class="nav-link"  href="#" onClick="theBook()">The Book</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link"  href="#" onClick="getPage(2780)">Content</a>
+              <a class="nav-link"  href="#" onClick="theTOC()">Content</a>
               </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#" onClick="getPage(2784)">The Author</a>
+    New e-book: "Headless WordPress"          <!-- a class="nav-link" href="#" onClick="getPage(2784,cntRight)">The Author</a -->
+              <a class="nav-link" href="#" onClick="theAuthorPage()">The Author</a>
             </li>
 
             <li class="nav-item">
@@ -77,5 +78,23 @@ const __Init = (function() {
         </div>
     </nav>` // /navigation panel
 
-  getPage(2761) // new e-book page
+  getPage(2761,cntRight) // new e-book page
 }())
+
+// the author page
+let theAuthorPage = function(){
+  getPage(2784,cntLeft) // author text
+  getPage(2819,cntRight) // book cover
+}
+
+// the Book
+let theBook = function(){
+  getPage(2761,cntLeft) // author text
+  getPage(2819,cntRight) // book cover
+}
+
+// the content
+let theTOC = function(){
+  getPage(2780,cntLeft) // author text
+  getPage(2819,cntRight) // book cover
+}

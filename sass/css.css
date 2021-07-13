@@ -10756,31 +10756,20 @@ body {
   margin: 0;
 }
 
-footer,
-header,
-#pClr-09 {
-  height: 30vh;
-  background-color: #3d0a91;
+footer {
+  color: #f8f9fa;
+  background-color: #133014;
+}
+footer a {
   color: #f8f9fa;
 }
-footer a,
-header a,
-#pClr-09 a {
-  color: #198754;
-}
-footer a:hover,
-header a:hover,
-#pClr-09 a:hover {
+footer a:hover {
   color: #79dfc1;
 }
 
 .colorSamples {
   height: 5rem;
   background: #0dcaf0;
-}
-
-#pClr-09 {
-  height: 5rem;
 }
 
 h1, .h1,
@@ -10798,12 +10787,9 @@ h6,
   font-family: "Carter One", cursive;
 }
 
-#pClr-10 {
-  color: #160d27;
-}
-
-header h1, #pClr-09 h1, header .h1, #pClr-09 .h1 {
-  color: #f8f9fa;
+#navHeader {
+  background-color: #133014;
+  min-height: 10vh;
 }
 
 /*# sourceMappingURL=css.css.map */
