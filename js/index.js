@@ -10,6 +10,7 @@ function getPage(pageId, showIn) {
 
   // preloader bt-spinner (I know, not a solution, but ... WTH)
   cntRight.innerHTML = '<div id="preloader" class="spinner-border text-success" role="status">'
+  cntLeft.innerHTML = '<div id="preloader" class="spinner-border text-success" role="status">'
 
   fetch(getPosts + pageId).then(
     response => {
@@ -18,7 +19,7 @@ function getPage(pageId, showIn) {
 
     //preloader.style.display = 'none'
 
-    console.log(data); // what's in the JSON string?
+    (data); // what's in the JSON string?
 
     // create HTML here
     showIn.innerHTML = '<article>' +
