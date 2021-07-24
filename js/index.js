@@ -1,5 +1,5 @@
 /**
- * file: js/js.js
+ * file: js/index.js
  **/
 
 // endpoint
@@ -10,6 +10,7 @@ function getPage(pageId, showIn) {
 
   // preloader bt-spinner (I know, not a solution, but ... WTH)
   cntRight.innerHTML = '<div id="preloader" class="spinner-border text-success" role="status">'
+  cntLeft.innerHTML = '<div id="preloader" class="spinner-border text-success" role="status">'
 
   fetch(getPosts + pageId).then(
     response => {
@@ -18,7 +19,7 @@ function getPage(pageId, showIn) {
 
     //preloader.style.display = 'none'
 
-    console.log(data); // what's in the JSON string?
+    (data); // what's in the JSON string?
 
     // create HTML here
     showIn.innerHTML = '<article>' +
@@ -42,42 +43,7 @@ orderNowBtn.addEventListener('click', function() {
 
 // initial setup
 const __Init = (function() {
-  // navigation panel
-  document.getElementById('navHere').innerHTML = `
-
-    <!-- navigation -->
-    <nav id="navHeader" class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Headless WordPress</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- nav items -->
-            <li class="nav-item">
-              <a class="nav-link"  href="#" onClick="theBook()">The Book</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link"  href="#" onClick="theTOC()">Content</a>
-              </li>
-
-            <li class="nav-item">
-    New e-book: "Headless WordPress"          <!-- a class="nav-link" href="#" onClick="getPage(2784,cntRight)">The Author</a -->
-              <a class="nav-link" href="#" onClick="theAuthorPage()">The Author</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/asathoor/wp-rest-api" target="_blank">Github</a>
-            </li>
-          </ul>
-            <!-- /nav-items -->
-        </div>
-        </div>
-    </nav>` // /navigation panel
-
+  getPage(2819,cntLeft) // book cover
   getPage(2761,cntRight) // new e-book page
 }())
 

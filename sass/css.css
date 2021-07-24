@@ -10792,4 +10792,9 @@ h6,
   min-height: 10vh;
 }
 
+.wp-block-social-links li {
+  display: inline-block;
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=css.css.map */
