@@ -46,7 +46,7 @@ footer {
 // color samples
 .colorSamples {
   height: 5rem;
-  background: $info; 
+  background: $info;
 }
 
 // headings
@@ -65,4 +65,12 @@ h6,
 #navHeader {
   background-color: $bg-header-footer;
   min-height: 10vh;
+}
+
+// SoMe
+.wp-block-social-links {
+  li {
+      display: inline-block;
+      text-decoration: none;
+    }
 }
